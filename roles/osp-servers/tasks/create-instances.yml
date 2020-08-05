@@ -1,3 +1,13 @@
+- debug:
+    msg:
+    - "Create instances '{{ server.0.name }}' :"
+    - "name: '{{ server.0.name }}'"
+    - "image: '{{ server.0.image }}'"
+    - "key_name: '{{ server.0.key_name }}'"
+    - "flavor: '{{ server.0.flavor }}'" 
+    - "security_groups: '{{ server.0.security_group }}'"   
+    - "meta: '{{ server.1 }}'"
+
 - name: Create instances {{ server.0.name }}
   os_server:
     cloud: openstack
