@@ -4,7 +4,7 @@
     name: "{{ server.0.name }}"
     image: "{{ server.0.image }}"
     key_name: "{{ server.0.key_name }}"
-    flavor: "{{ server.0.falvor }}"
+    flavor: "{{ server.0.flavor }}"
     security_groups: "{{ server.0.security_groups }}"
     delete_fip: yes
     wait: no
