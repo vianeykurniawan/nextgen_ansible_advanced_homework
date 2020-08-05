@@ -2,6 +2,6 @@
 
 - name: start {{ payload }}
   service:
-    name: {{ payload }}
+    name: "{{ payload }}"
     state: restarted
 
