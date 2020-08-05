@@ -1,3 +1,5 @@
----
-
-# tasks file for osp.servers
+- name: Create osp instances
+  include_tasks: create-instances.yml
+  loop: "{{ osp_servers | subelements('meta')|list }}"
+  loop_control:
+    loop_var: server
