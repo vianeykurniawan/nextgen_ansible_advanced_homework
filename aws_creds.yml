@@ -28,10 +28,8 @@
       tower_username: admin
       tower_password: r3dh4t1!
       tower_verify_ssl: no
- #     ssh_key_data: "/root/.ssh/{{ file_to_copy.stdout }}"
-      ssh_key_data: /root/.ssh/{{tower_GUID}}key.pem
- #     username: ec2-user
-      username: "{{ opentlc_login }}"
+      ssh_key_data: "/root/.ssh/{{ file_to_copy.stdout }}"
+      username: ec2-user
   - name: Update Prod Job template
     tower_job_template:
       name: "09_3 tier app on Prod"
