@@ -3,9 +3,11 @@
   tasks:
   - name: Curl website
     uri:
-      url: "http://localhost"
+      url: "http://{{ item }}"
       return_content: yes
       status_code: 200
+    with_items:
+      - "{{ inventory_hostname}}"
     register: webpage
         
   - debug: var=webpage.content
