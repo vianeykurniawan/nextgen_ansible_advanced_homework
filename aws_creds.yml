@@ -1,4 +1,4 @@
-- hosts: tag_AnsibleGroup_bastions
+- hosts: bastions
   gather_facts: true
   become: true
   tasks:
